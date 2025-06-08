@@ -1,0 +1,38 @@
+{
+  "8479318": {
+    "name": "Auston Matthews",
+    "goals": 368,
+    "assists": 285,
+    "points": 653,
+    "games": 562,
+    "team": "TOR",
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8479318.png"
+  },
+  "8478402": {
+    "name": "Connor McDavid",
+    "goals": 334,
+    "assists": 646,
+    "points": 980,
+    "games": 645,
+    "team": "EDM",
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8478402.png"
+  },
+  "8477939": {
+    "name": "Mitch Marner",
+    "goals": 194,
+    "assists": 446,
+    "points": 640,
+    "games": 576,
+    "team": "TOR",
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8477939.png"
+  },
+  "8480800": {
+    "name": "Leon Draisaitl",
+    "goals": 327,
+    "assists": 451,
+    "points": 778,
+    "games": 638,
+    "team": "EDM",
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8480800.png"
+  }
+}

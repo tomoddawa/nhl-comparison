@@ -1,0 +1,47 @@
+{
+  "generated": "2025-06-08T14:59:48.871447Z",
+  "teams": [
+    {
+      "id": 10,
+      "name": "Toronto Maple Leafs",
+      "abbreviation": "TOR",
+      "roster": {
+        "roster": [
+          {
+            "person": {
+              "id": 8479318,
+              "fullName": "Auston Matthews"
+            }
+          },
+          {
+            "person": {
+              "id": 8477939,
+              "fullName": "Mitch Marner"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name": "Edmonton Oilers",
+      "abbreviation": "EDM",
+      "roster": {
+        "roster": [
+          {
+            "person": {
+              "id": 8478402,
+              "fullName": "Connor McDavid"
+            }
+          },
+          {
+            "person": {
+              "id": 8480800,
+              "fullName": "Leon Draisaitl"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
