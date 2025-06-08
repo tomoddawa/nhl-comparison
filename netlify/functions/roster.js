@@ -1,6 +1,6 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch'); // <- now guaranteed to work with v2
 
-export async function handler(event, context) {
+exports.handler = async function (event, context) {
   try {
     const res = await fetch('https://statsapi.web.nhl.com/api/v1/teams?expand=team.roster');
     const data = await res.json();
@@ -10,9 +10,11 @@ export async function handler(event, context) {
       body: JSON.stringify(data),
     };
   } catch (error) {
+    console.error('Function error:', error.message);
+
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Failed to fetch roster', error: error.message }),
     };
   }
-}
+};
