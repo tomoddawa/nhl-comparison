@@ -110,10 +110,10 @@ function App() {
           handleSelect={player => handleSelectPlayer(player, setPlayer2, setPlayer2Query, setPlayer2Matches)}
         />
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-        {player1 && <PlayerCard player={player1} opponent={player2} />}
-        {player2 && <PlayerCard player={player2} opponent={player1} />}
-      </div>
+      <div className="player-card-container">
+  {player1 && <PlayerCard player={player1} opponent={player2} />}
+  {player2 && <PlayerCard player={player2} opponent={player1} />}
+</div>
     </div>
   );
 }
