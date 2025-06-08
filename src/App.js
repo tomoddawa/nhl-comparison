@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchRoster = async () => {
       try {
-        const res = await fetch('/.netlify/functions/roster');
+        const res = await fetch('/roster.json');
         const data = await res.json();
 
         const allPlayers = data.teams.flatMap(team =>

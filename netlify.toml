@@ -1,2 +1,5 @@
 [functions]
   directory = "netlify/functions"
+
+[functions."update-roster"]
+  schedule = "0 3 * * *"
