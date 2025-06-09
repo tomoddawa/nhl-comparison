@@ -129,3 +129,22 @@ li {
     height: 128px;
   }
 }
+
+.player-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.player-inputs > div {
+  flex: 1 1 150px;
+  min-width: 140px;
+}
+
+@media (max-width: 600px) {
+  .player-inputs > div {
+    flex: 1 1 48%;
+  }
+}

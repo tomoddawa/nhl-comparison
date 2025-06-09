@@ -93,26 +93,61 @@ function App() {
   <img src="/logo.png" alt="Oddawa Logo" className="logo" />
   <h1>Oddawa's NHL Player Comparison</h1>
 </div>
-      <div style={{ marginBottom: '20px', display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <SearchInput
-          label="Player 1"
-          query={player1Query}
-          matches={player1Matches}
-          setQuery={setPlayer1Query}
-          setMatches={setPlayer1Matches}
-          handleSearch={handleSearch}
-          handleSelect={player => handleSelectPlayer(player, setPlayer1, setPlayer1Query, setPlayer1Matches)}
-        />
-        <SearchInput
-          label="Player 2"
-          query={player2Query}
-          matches={player2Matches}
-          setQuery={setPlayer2Query}
-          setMatches={setPlayer2Matches}
-          handleSearch={handleSearch}
-          handleSelect={player => handleSelectPlayer(player, setPlayer2, setPlayer2Query, setPlayer2Matches)}
-        />
-      </div>
+      <div className="player-inputs">
+  <div style={{ position: 'relative' }}>
+    <label>Player 1:</label>
+    <input
+      type="text"
+      value={player1Query}
+      placeholder="Type player name"
+      onChange={(e) => {
+        setPlayer1Query(e.target.value);
+        handleSearch(e.target.value, setPlayer1Matches);
+      }}
+      onFocus={() => {
+        handleSearch(player1Query, setPlayer1Matches);
+      }}
+    />
+    {player1Matches.length > 0 && (
+      <ul style={suggestionBoxStyle}>
+        {player1Matches.map(player => (
+          <li key={player.id} style={suggestionStyle} onClick={() =>
+            handleSelectPlayer(player, setPlayer1, setPlayer1Query, setPlayer1Matches)
+          }>
+            {player.name}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+
+  <div style={{ position: 'relative' }}>
+    <label>Player 2:</label>
+    <input
+      type="text"
+      value={player2Query}
+      placeholder="Type player name"
+      onChange={(e) => {
+        setPlayer2Query(e.target.value);
+        handleSearch(e.target.value, setPlayer2Matches);
+      }}
+      onFocus={() => {
+        handleSearch(player2Query, setPlayer2Matches);
+      }}
+    />
+    {player2Matches.length > 0 && (
+      <ul style={suggestionBoxStyle}>
+        {player2Matches.map(player => (
+          <li key={player.id} style={suggestionStyle} onClick={() =>
+            handleSelectPlayer(player, setPlayer2, setPlayer2Query, setPlayer2Matches)
+          }>
+            {player.name}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</div>
       <div className="player-card-container">
   {player1 && <PlayerCard player={player1} opponent={player2} />}
   {player2 && <PlayerCard player={player2} opponent={player1} />}
