@@ -156,32 +156,6 @@ function App() {
   );
 }
 
-const SearchInput = ({ label, query, matches, setQuery, setMatches, handleSearch, handleSelect }) => (
-  <div style={{ position: 'relative' }}>
-    <label>{label}:</label>
-    <input
-  type="text"
-  value={query}
-  placeholder="Type player name"
-  onChange={(e) => {
-    setQuery(e.target.value);
-    handleSearch(e.target.value, setMatches);
-  }}
-  onFocus={() => {
-    handleSearch(query, setMatches); // trigger match list on click
-  }}
-/>
-    {matches.length > 0 && (
-      <ul style={suggestionBoxStyle}>
-        {matches.map(player => (
-          <li key={player.id} style={suggestionStyle} onClick={() => handleSelect(player)}>
-            {player.name}
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
-);
 
 const PlayerCard = ({ player, opponent }) => (
   <div className="player-card">
