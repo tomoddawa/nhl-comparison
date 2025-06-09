@@ -1,38 +1,56 @@
 {
-  "8479318": {
-    "name": "Auston Matthews",
-    "goals": 368,
-    "assists": 285,
-    "points": 653,
-    "games": 562,
-    "team": "TOR",
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8479318.png"
-  },
   "8478402": {
     "name": "Connor McDavid",
+    "team": "EDM",
     "goals": 334,
     "assists": 646,
     "points": 980,
     "games": 645,
-    "team": "EDM",
     "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8478402.png"
+  },
+  "8479318": {
+    "name": "Auston Matthews",
+    "team": "TOR",
+    "goals": 368,
+    "assists": 285,
+    "points": 653,
+    "games": 562,
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8479318.png"
   },
   "8477939": {
     "name": "Mitch Marner",
+    "team": "TOR",
     "goals": 194,
     "assists": 446,
     "points": 640,
     "games": 576,
-    "team": "TOR",
     "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8477939.png"
   },
   "8480800": {
     "name": "Leon Draisaitl",
+    "team": "EDM",
     "goals": 327,
     "assists": 451,
     "points": 778,
     "games": 638,
-    "team": "EDM",
     "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8480800.png"
+  },
+  "8471675": {
+    "name": "Sidney Crosby",
+    "team": "PIT",
+    "goals": 592,
+    "assists": 993,
+    "points": 1585,
+    "games": 1230,
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/PIT/8471675.png"
+  },
+  "8471214": {
+    "name": "Alex Ovechkin",
+    "team": "WSH",
+    "goals": 853,
+    "assists": 667,
+    "points": 1520,
+    "games": 1426,
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/WSH/8471214.png"
   }
 }
