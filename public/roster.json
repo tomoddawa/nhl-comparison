@@ -1,9 +1,25 @@
 {
-  "generated": "2025-06-08T14:59:48.871447Z",
   "teams": [
     {
-      "id": 10,
-      "name": "Toronto Maple Leafs",
+      "abbreviation": "EDM",
+      "roster": {
+        "roster": [
+          {
+            "person": {
+              "id": 8478402,
+              "fullName": "Connor McDavid"
+            }
+          },
+          {
+            "person": {
+              "id": 8477934,
+              "fullName": "Leon Draisaitl"
+            }
+          }
+        ]
+      }
+    },
+    {
       "abbreviation": "TOR",
       "roster": {
         "roster": [
@@ -23,21 +39,26 @@
       }
     },
     {
-      "id": 22,
-      "name": "Edmonton Oilers",
-      "abbreviation": "EDM",
+      "abbreviation": "WSH",
       "roster": {
         "roster": [
           {
             "person": {
-              "id": 8478402,
-              "fullName": "Connor McDavid"
+              "id": 8471214,
+              "fullName": "Alex Ovechkin"
             }
-          },
+          }
+        ]
+      }
+    },
+    {
+      "abbreviation": "PIT",
+      "roster": {
+        "roster": [
           {
             "person": {
-              "id": 8477934,
-              "fullName": "Leon Draisaitl"
+              "id": 8471675,
+              "fullName": "Sidney Crosby"
             }
           }
         ]
