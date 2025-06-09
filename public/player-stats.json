@@ -53,4 +53,15 @@
     "games": 1426,
     "image": "https://assets.nhle.com/mugs/nhl/20242025/WSH/8471214.png"
   }
+  {
+  "8471214": {
+    "name": "Alex Ovechkin",
+    ...
+  },
+  "8471675": {
+    "name": "Sidney Crosby",
+    ...
+  }
+  // update: Crosby + Ovi added
+}
 }
