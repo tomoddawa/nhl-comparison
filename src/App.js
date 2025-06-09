@@ -54,7 +54,7 @@ function App() {
 
   const fetchPlayerData = async (id, setter) => {
     try {
-      const res = await fetch('/player-stats.json');
+      const res = await fetch(`/player-stats.json?t=${Date.now()}`);
       const data = await res.json();
 
       const player = data[id];
@@ -146,11 +146,53 @@ const PlayerCard = ({ player, opponent }) => (
   <div className="player-card">
     <img src={player.image} alt={player.name} className="player-photo" />
     <h2>{player.name}</h2>
-    <StatBar label="Goals" value={player.goals} max={Math.max(player.goals, opponent?.goals || 0)} avg={player.goals / player.games} highlight={player.goals > (opponent?.goals || 0)} />
-    <StatBar label="Assists" value={player.assists} max={Math.max(player.assists, opponent?.assists || 0)} avg={player.assists / player.games} highlight={player.assists > (opponent?.assists || 0)} />
-    <StatBar label="Points" value={player.points} max={Math.max(player.points, opponent?.points || 0)} avg={player.points / player.games} highlight={player.points > (opponent?.points || 0)} />
-    <StatBar label="Games Played" value={player.games} max={Math.max(player.games, opponent?.games || 0)} highlight={player.games > (opponent?.games || 0)} />
+    <StatBar
+  label="Goals"
+  value={player.goals}
+  max={Math.max(player.goals, opponent?.goals || 0)}
+  highlight={player.goals > (opponent?.goals || 0)}
+/>
+<StatBar
+  label="Assists"
+  value={player.assists}
+  max={Math.max(player.assists, opponent?.assists || 0)}
+  highlight={player.assists > (opponent?.assists || 0)}
+/>
+<StatBar
+  label="Points"
+  value={player.points}
+  max={Math.max(player.points, opponent?.points || 0)}
+  highlight={player.points > (opponent?.points || 0)}
+/>
+<StatBar
+  label="Games Played"
+  value={player.games}
+  max={Math.max(player.games, opponent?.games || 0)}
+  highlight={player.games > (opponent?.games || 0)}
+/>
+      <div style={{ marginTop: '20px' }}>
+  <h4 style={{ marginBottom: '8px' }}>Per Game</h4>
+  <StatBar
+    label="Goals/Game"
+    value={player.goals / player.games}
+    max={Math.max(player.goals / player.games, opponent?.goals / opponent?.games || 0)}
+    highlight={(player.goals / player.games) > (opponent?.goals / opponent?.games || 0)}
+  />
+  <StatBar
+    label="Assists/Game"
+    value={player.assists / player.games}
+    max={Math.max(player.assists / player.games, opponent?.assists / opponent?.games || 0)}
+    highlight={(player.assists / player.games) > (opponent?.assists / opponent?.games || 0)}
+  />
+  <StatBar
+    label="Points/Game"
+    value={player.points / player.games}
+    max={Math.max(player.points / player.games, opponent?.points / opponent?.games || 0)}
+    highlight={(player.points / player.games) > (opponent?.points / opponent?.games || 0)}
+  />
+</div>
   </div>
+  
 );
 
 const StatBar = ({ label, value, max, avg, highlight = false }) => {
@@ -162,7 +204,7 @@ const StatBar = ({ label, value, max, avg, highlight = false }) => {
   return (
     <div style={{ margin: '10px 0', textAlign: 'left' }}>
       <div style={{ fontWeight: 500, color: textColor, textShadow: glow }}>
-        {label}: {value}
+        {label}: {Number.isInteger(value) ? value : value.toFixed(2)}
       </div>
       <div style={{ height: '10px', background: '#e0e0e0', borderRadius: '5px', marginTop: '4px', overflow: 'hidden' }}>
         <div style={{ width: `${percent}%`, background: barColor, height: '100%', borderRadius: '5px', boxShadow: glow }}></div>
