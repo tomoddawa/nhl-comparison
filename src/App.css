@@ -52,12 +52,12 @@ button:hover {
 }
 
 .player-card {
-  background: white;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   padding: 20px;
-  width: 320px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
 }
 
 .player-card:hover {
@@ -97,17 +97,16 @@ li {
 
 .player-card-container {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 16px;
 }
 
-@media screen and (min-width: 500px) {
-  .player-card-container {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+@media (max-width: 768px) {
+  .player-card {
+    flex: 1 1 45%;
+    max-width: 300px;
   }
 }
 

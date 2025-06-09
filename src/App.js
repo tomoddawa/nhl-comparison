@@ -91,7 +91,7 @@ function App() {
     <div className="App">
       <div className="app-header">
   <img src="/logo.png" alt="Oddawa Logo" className="logo" />
-  <h1>Oddawa's NHL Player Comparison</h1>
+  <h1>Oddawa's NHL  Stat Comparison</h1>
 </div>
       <div className="player-inputs">
   <div style={{ position: 'relative' }}>
