@@ -110,3 +110,22 @@ li {
     flex-wrap: wrap;
   }
 }
+
+.app-header {
+  display: flex;
+  flex-direction: column;  /* stack vertically */
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  height: 192px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    height: 128px;
+  }
+}

@@ -89,7 +89,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NHL Player Comparison</h1>
+      <div className="app-header">
+  <img src="/logo.png" alt="Oddawa Logo" className="logo" />
+  <h1>Oddawa's NHL Player Comparison</h1>
+</div>
       <div style={{ marginBottom: '20px', display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
         <SearchInput
           label="Player 1"
