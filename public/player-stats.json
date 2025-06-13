@@ -6,7 +6,8 @@
     "assists": 646,
     "points": 980,
     "games": 645,
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8478402.png"
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8478402.png",
+    "birthdate": "1997-01-13"
   },
   "8479318": {
     "name": "Auston Matthews",
@@ -15,7 +16,8 @@
     "assists": 285,
     "points": 653,
     "games": 562,
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8479318.png"
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8479318.png",
+    "birthdate": "1997-09-17"
   },
   "8478483": {
     "name": "Mitch Marner",
@@ -24,7 +26,8 @@
     "assists": 446,
     "points": 640,
     "games": 576,
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8478483.png"
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/TOR/8478483.png",
+    "birthdate": "1997-05-05"
   },
   "8477934": {
     "name": "Leon Draisaitl",
@@ -33,7 +36,8 @@
     "assists": 557,
     "points": 956,
     "games": 790,
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8477934.png"
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/EDM/8477934.png",
+    "birthdate": "1995-10-27"
   },
   "8471675": {
     "name": "Sidney Crosby",
@@ -42,7 +46,8 @@
     "assists": 993,
     "points": 1585,
     "games": 1230,
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/PIT/8471675.png"
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/PIT/8471675.png",
+    "birthdate": "1987-08-07"
   },
   "8471214": {
     "name": "Alex Ovechkin",
@@ -51,6 +56,7 @@
     "assists": 667,
     "points": 1520,
     "games": 1426,
-    "image": "https://assets.nhle.com/mugs/nhl/20242025/WSH/8471214.png"
+    "image": "https://assets.nhle.com/mugs/nhl/20242025/WSH/8471214.png",
+    "birthdate": "1985-09-17"
   }
 }

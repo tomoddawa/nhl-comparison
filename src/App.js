@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 
+ const calculateAge = (birthdate) => {
+  const dob = new Date(birthdate);
+  const today = new Date();
+  let age = today.getFullYear() - dob.getFullYear();
+  const m = today.getMonth() - dob.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+    age--;
+  }
+  return age;
+};
+
 const suggestionBoxStyle = {
   position: 'absolute',
   backgroundColor: '#fff',
@@ -52,6 +63,8 @@ function App() {
     fetchRoster();
   }, []);
 
+ 
+
   const fetchPlayerData = async (id, setter) => {
     try {
       const res = await fetch(`/player-stats.json?t=${Date.now()}`);
@@ -66,7 +79,8 @@ function App() {
         assists: player.assists,
         points: player.points,
         games: player.games,
-        image: player.image
+        image: player.image,
+        birthdate: player.birthdate
       });
     } catch (err) {
       console.error('Error loading player data:', err);
@@ -157,10 +171,14 @@ function App() {
 }
 
 
+
 const PlayerCard = ({ player, opponent }) => (
   <div className="player-card">
     <img src={player.image} alt={player.name} className="player-photo" />
     <h2>{player.name}</h2>
+    <p style={{ margin: 0, fontSize: '14px', color: '#666' }}>
+  Age: {calculateAge(player.birthdate)}
+</p>
     <StatBar
   label="Goals"
   value={player.goals}
